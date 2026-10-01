@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SP Converter</title>
+<meta name="description" data-i18n-content="index_desc" content="Программа для Windows 10 и 11: пакетная конвертация изображений между JPG, PNG, WEBP, AVIF, HEIC, PDF и другими форматами.">
+
+<link rel="icon" href="assets/1.png" sizes="any">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+    (function () {
+        var root = document.documentElement;
+        try {
+            var t = localStorage.getItem('spc-theme');
+            if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t);
+        } catch (e) { }
+
+        var lang = null;
+        try { lang = localStorage.getItem('spc-lang'); } catch (e) { }
+        if (lang !== 'ru' && lang !== 'en') {
+            var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+            lang = 'en';
+            for (var i = 0; i < list.length; i++) {
+                var code = String(list[i]).toLowerCase().split('-')[0];
+                if (code === 'ru' || code === 'uk' || code === 'be') { lang = 'ru'; break; }
+                if (code) break;
+            }
+        }
+        root.setAttribute('lang', lang);
+    })();
+</script>
+</head>
+<body>
+
+<header class="masthead">
+    <div class="masthead-inner">
+        <a class="wordmark" href="#top">SP Converter</a>
+
+        <nav>
+            <a href="#check" data-i18n="nav_check">Как это работает</a>
+            <a href="#install" data-i18n="nav_install">Скачать</a>
+            <a href="donate.html" data-i18n="nav_donate">Поддержать</a>
+        </nav>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <span class="switches">
+            <div class="lang-switch" role="radiogroup" aria-label="Language / Язык">
+                <button type="button" class="lang-option active" data-lang="ru" role="radio" aria-checked="true">RU</button>
+                <button type="button" class="lang-option" data-lang="en" role="radio" aria-checked="false">EN</button>
+            </div>
+            <button class="icon-btn" id="theme" type="button">
+                <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4.2"/>
+                    <path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5"/>
+                </svg>
+                <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z"/>
+                </svg>
+            </button>
+        </span>
+    </div>
+</header>
+
+<div class="page">
+
+    <div class="hero">
+        <div class="hero-text" id="top">
+            <h1 data-i18n="hero_title">Пакетная конвертация изображений</h1>
+            <p data-i18n="hero_lede">Переводит фотографии и картинки между двадцатью с лишним форматами. Отдельные файлы или целые папки, на всех ядрах процессора и без подключения к интернету.</p>
+            <div class="actions">
+                <a class="action primary" id="dl-main" href="https://github.com/J-udgW05/SP-onverter/releases/latest" data-i18n="hero_download">Скачать</a>
+                <a class="action" href="https://github.com/J-udgW05/SP-onverter" target="_blank" rel="noopener noreferrer" data-i18n="hero_source">Исходный код</a>
+            </div>
+        </div>
+
+        <div class="hero-mark">
+            <img src="assets/icon.png" alt="" width="512" height="512">
+        </div>
+    </div>
+
+    <section>
+        <div class="section-head" id="check">
+            <p class="kicker" data-i18n="check_kicker">Как это работает</p>
+            <h2 data-i18n="check_title">Перетащить, выбрать формат, готово</h2>
+            <p data-i18n="check_lede">Укажите файл или папку, выберите формат и качество. Программа обработает файлы параллельно и ничего не перезапишет: при совпадении имени к новому файлу добавится суффикс.</p>
+        </div>
+        <div class="duo">
+            <article>
+                <h3 data-i18n="m1_title">Конвертация</h3>
+                <p class="role" data-i18n="m1_role">Файлы и папки</p>
+                <ul>
+                    <li data-i18n="m1_1">Отдельный файл или целая папка</li>
+                    <li data-i18n="m1_2">Вложенные папки и сохранение их структуры</li>
+                    <li data-i18n="m1_3">Параллельная обработка на всех ядрах</li>
+                    <li data-i18n="m1_4">Существующие файлы не перезаписываются</li>
+                    <li data-i18n="m1_5">Готовые результаты не конвертируются повторно</li>
+                </ul>
+            </article>
+            <article>
+                <h3 data-i18n="m2_title">Обработка</h3>
+                <p class="role" data-i18n="m2_role">Magick.NET и Ghostscript</p>
+                <ul>
+                    <li data-i18n="m2_1">Поворот по данным EXIF</li>
+                    <li data-i18n="m2_2">Белый фон вместо прозрачности, где её нет</li>
+                    <li data-i18n="m2_3">CMYK в sRGB для экранных форматов</li>
+                    <li data-i18n="m2_4">Кадры GIF и страницы PDF по отдельности</li>
+                    <li data-i18n="m2_5">PDF в 300 DPI, иконки ICO нескольких размеров</li>
+                </ul>
+            </article>
+        </div>
+
+        <p class="note" data-i18n="check_note">Удаление оригиналов по умолчанию выключено. Если его включить, исходный файл перемещается в корзину и только после того, как все результаты записаны на диск.</p>
+
+        <div class="subsection" id="formats">
+            <p class="kicker" data-i18n="fmt_kicker">Форматы</p>
+            <h3 data-i18n="fmt_title">Что поддерживается</h3>
+            <div class="format-groups">
+                <div>
+                    <h4 data-i18n="fmt_rw">Чтение и запись</h4>
+                    <div class="chips"><span>JPG</span><span>PNG</span><span>WEBP</span><span>AVIF</span><span>JXL</span><span>GIF</span><span>TIFF</span><span>BMP</span><span>TGA</span><span>ICO</span><span>PSD</span><span>DDS</span><span>EXR</span><span>PDF</span><span>SVG</span><span>PPM</span><span>PGM</span><span>PBM</span></div>
+                </div>
+                <div>
+                    <h4 data-i18n="fmt_ro">Только чтение</h4>
+                    <div class="chips"><span>HEIC</span><span>HEIF</span></div>
+                </div>
+                <div>
+                    <h4 data-i18n="fmt_raw">RAW-снимки</h4>
+                    <div class="chips"><span>CR2</span><span>CR3</span><span>NEF</span><span>ARW</span><span>DNG</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-head" id="install">
+            <p class="kicker" data-i18n="inst_kicker">Установка</p>
+            <h2 data-i18n="inst_title">Установщик или портативная версия</h2>
+            <p class="platform">
+                <svg class="i-win" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M2.4 4.3 10.8 3.1v8.2H2.4zM12.4 2.9 21.6 1.6v9.7h-9.2zM2.4 12.7h8.4v8.2L2.4 19.7zM12.4 12.7h9.2v9.7l-9.2-1.3z"/></svg>
+                <span data-i18n="inst_req">Для Windows 10/11 x64</span>
+            </p>
+        </div>
+        <div class="install">
+            <article>
+                <h3 data-i18n="inst_1_title">Установщик</h3>
+                <span class="file"><span class="file-os" title="Windows 10 / 11 x64"><svg class="i-win" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M2.4 4.3 10.8 3.1v8.2H2.4zM12.4 2.9 21.6 1.6v9.7h-9.2zM2.4 12.7h8.4v8.2L2.4 19.7zM12.4 12.7h9.2v9.7l-9.2-1.3z"/></svg></span><span id="file-setup">SPConverter_Setup.exe</span></span>
+                <a class="action" id="dl-setup" href="https://github.com/J-udgW05/SP-onverter/releases/latest" data-i18n="inst_download">Скачать</a>
+            </article>
+            <article>
+                <h3 data-i18n="inst_2_title">Портативная версия</h3>
+                <span class="file"><span class="file-os" title="Windows 10 / 11 x64"><svg class="i-win" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M2.4 4.3 10.8 3.1v8.2H2.4zM12.4 2.9 21.6 1.6v9.7h-9.2zM2.4 12.7h8.4v8.2L2.4 19.7zM12.4 12.7h9.2v9.7l-9.2-1.3z"/></svg></span><span id="file-zip">SPConverter_Portable.zip</span></span>
+                <a class="action" id="dl-zip" href="https://github.com/J-udgW05/SP-onverter/releases/latest" data-i18n="inst_download">Скачать</a>
+            </article>
+        </div>
+        <p class="note" data-i18n="inst_note">Сборка не подписана сертификатом: при первом запуске Windows покажет «Неизвестный издатель». Нажмите «Подробнее», затем «Выполнить в любом случае».</p>
+    </section>
+
+    <footer>
+        <span class="footer-copy" data-i18n="footer_copy">© 2026 SP Converter · <a href="https://github.com/J-udgW05" target="_blank" rel="noopener noreferrer">J-udgW05</a></span>
+        <span class="footer-links">
+            <a href="https://github.com/J-udgW05/SP-onverter" data-i18n="nav_repo" target="_blank" rel="noopener noreferrer">Репозиторий</a>
+            <a href="https://github.com/J-udgW05/SP-onverter/blob/main/LICENSE" data-i18n="footer_license" target="_blank" rel="noopener noreferrer">Лицензия</a>
+            <a href="https://github.com/J-udgW05/SP-onverter/blob/main/THIRD-PARTY-NOTICES.md" data-i18n="footer_third" target="_blank" rel="noopener noreferrer">Компоненты</a>
+            <a href="privacy.html" data-i18n="footer_privacy">Конфиденциальность</a>
+            <span class="footer-divider" aria-hidden="true"></span>
+            <button type="button" class="footer-email" id="copy-email" data-copy="j-udgw05@tuta.io">
+                <span data-i18n="footer_email">j-udgw05@tuta.io</span>
+                <span class="copy-toast" aria-hidden="true" data-i18n="footer_copied">Скопировано</span>
+            </button>
+        </span>
+    </footer>
+
+</div>
+
+<button id="back-to-top" class="icon-btn" type="button" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M6 11l6-6 6 6"/>
+    </svg>
+</button>
+
+<script src="app.js"></script>
+
+</body>
+</html>
