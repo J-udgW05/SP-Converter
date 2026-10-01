@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var REPO = 'J-udgW05/SP-onverter';
+    var REPO = 'J-udgW05/SP-Converter';
 
 
     var HTML_KEYS = ["footer_copy", "pp_s2_i1", "pp_s2_i2", "pp_s2_p2", "pp_s3_i1", "pp_s3_i2", "pp_s3_i3", "pp_s3_p2", "pp_s5_p2", "pp_s9_p1", "dn_s5_i1", "dn_s5_i2"];
@@ -60,8 +60,8 @@
             "dn_s4_p1": "SP Converter бесплатна и развивается одним человеком в свободное время. Если программа оказалась вам полезна и вы хотите поддержать её развитие, вот как это можно сделать.",
             "dn_s5_h": "Помочь можно и бесплатно",
             "dn_s5_p1": "Деньги не единственная и не обязательная форма участия. Всё перечисленное ниже помогает проекту не меньше.",
-            "dn_s5_i1": "Звезда <a href=\"https://github.com/J-udgW05/SP-onverter\">репозиторию</a> и рассказ о программе тем, кому она пригодится",
-            "dn_s5_i2": "Сообщение об ошибке с примером файла <a href=\"https://github.com/J-udgW05/SP-onverter/issues\">в разделе Issues</a>: после самого кода это самая полезная помощь",
+            "dn_s5_i1": "Звезда <a href=\"https://github.com/J-udgW05/SP-Converter\">репозиторию</a> и рассказ о программе тем, кому она пригодится",
+            "dn_s5_i2": "Сообщение об ошибке с примером файла <a href=\"https://github.com/J-udgW05/SP-Converter/issues\">в разделе Issues</a>: после самого кода это самая полезная помощь",
             "dn_s5_i3": "Перевод, правки кода и описания: pull request всегда к месту",
             "pp_doc_title": "Политика конфиденциальности · SP Converter",
             "pp_desc": "Что сайт SP Converter сохраняет в браузере и какие запросы отправляет при открытии страницы.",
@@ -90,7 +90,7 @@
             "pp_s4_i5": "Не передаёт и не продаёт данные третьим лицам, передавать нечего",
             "pp_s5_h": "Сама программа",
             "pp_s5_p1": "SP Converter работает без подключения к сети и никуда не отправляет ни файлы, ни сведения о них. Программа читает выбранные вами изображения и записывает результаты в папку назначения, существующие файлы не перезаписываются. Исходные файлы удаляются только при включённом параметре «Удалить оригиналы», и то в корзину. Настройки, размер и положение окна хранятся в файле settings.json рядом с программой.",
-            "pp_s5_p2": "Проверить это можно по исходному коду: <a href=\"https://github.com/J-udgW05/SP-onverter\">репозиторий проекта</a> открыт.",
+            "pp_s5_p2": "Проверить это можно по исходному коду: <a href=\"https://github.com/J-udgW05/SP-Converter\">репозиторий проекта</a> открыт.",
             "pp_s6_h": "Переходы на другие сайты",
             "pp_s6_p1": "Ссылки со страницы ведут на GitHub: к исходному коду и файлам выпусков. После перехода действуют правила того сайта, на который вы попали.",
             "pp_s7_h": "Ваши права",
@@ -99,7 +99,7 @@
             "pp_s8_h": "Изменения",
             "pp_s8_p1": "Если состав запросов или сохраняемых значений изменится, изменится и эта страница, а дата вверху обновится. История правок видна в репозитории проекта, задним числом переписать её незаметно не получится.",
             "pp_s9_h": "Вопросы",
-            "pp_s9_p1": "Вопросы по этой странице и по программе задавайте <a href=\"https://github.com/J-udgW05/SP-onverter/issues\">в разделе Issues репозитория</a>.",
+            "pp_s9_p1": "Вопросы по этой странице и по программе задавайте <a href=\"https://github.com/J-udgW05/SP-Converter/issues\">в разделе Issues репозитория</a>.",
             "nav_back": "Вернуться на сайт",
             "aria_theme_dark": "Включить тёмную тему",
             "aria_theme_light": "Включить светлую тему",
@@ -157,8 +157,8 @@
             "dn_s4_p1": "SP Converter is free and developed by one person in their spare time. If the program has been useful to you and you would like to support its development, here is how.",
             "dn_s5_h": "Helping without money",
             "dn_s5_p1": "Money is neither the only nor a required form of taking part. Everything below helps the project just as much.",
-            "dn_s5_i1": "A star on the <a href=\"https://github.com/J-udgW05/SP-onverter\">repository</a>, and a word about the program to someone who would find it useful",
-            "dn_s5_i2": "A bug report with a sample file <a href=\"https://github.com/J-udgW05/SP-onverter/issues\">in the Issues section</a>: after the code itself, this is the most useful help there is",
+            "dn_s5_i1": "A star on the <a href=\"https://github.com/J-udgW05/SP-Converter\">repository</a>, and a word about the program to someone who would find it useful",
+            "dn_s5_i2": "A bug report with a sample file <a href=\"https://github.com/J-udgW05/SP-Converter/issues\">in the Issues section</a>: after the code itself, this is the most useful help there is",
             "dn_s5_i3": "Translations, code and text fixes: a pull request is always welcome",
             "pp_doc_title": "Privacy policy · SP Converter",
             "pp_desc": "What the SP Converter site stores in your browser and what requests it makes when the page opens.",
@@ -187,7 +187,7 @@
             "pp_s4_i5": "Nothing shared or sold to third parties, there is nothing to share",
             "pp_s5_h": "The program itself",
             "pp_s5_p1": "SP Converter works without a network connection and sends neither files nor information about them anywhere. It reads the images you choose and writes the results to the destination folder; existing files are never overwritten. Source files are removed only when the “Delete originals” option is on, and even then they go to the Recycle Bin. Settings and the window size and position are stored in settings.json next to the program.",
-            "pp_s5_p2": "You can verify this in the source code: the <a href=\"https://github.com/J-udgW05/SP-onverter\">project repository</a> is open.",
+            "pp_s5_p2": "You can verify this in the source code: the <a href=\"https://github.com/J-udgW05/SP-Converter\">project repository</a> is open.",
             "pp_s6_h": "Links to other sites",
             "pp_s6_p1": "Links from this page lead to GitHub: to the source code and the release files. Once you follow them, the rules of that site apply.",
             "pp_s7_h": "Your rights",
@@ -196,7 +196,7 @@
             "pp_s8_h": "Changes",
             "pp_s8_p1": "If the set of requests or stored values changes, this page changes with it and the date at the top is updated. The edit history is visible in the project repository, it cannot be quietly rewritten after the fact.",
             "pp_s9_h": "Questions",
-            "pp_s9_p1": "Questions about this page or the program go <a href=\"https://github.com/J-udgW05/SP-onverter/issues\">to the repository Issues</a>.",
+            "pp_s9_p1": "Questions about this page or the program go <a href=\"https://github.com/J-udgW05/SP-Converter/issues\">to the repository Issues</a>.",
             "nav_back": "Back to the site",
             "aria_theme_dark": "Switch to dark theme",
             "aria_theme_light": "Switch to light theme",
