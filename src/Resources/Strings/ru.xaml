@@ -1,0 +1,160 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="Nav_MassConvert">Массовая конвертация</system:String>
+    <system:String x:Key="Nav_SingleConvert">Один файл</system:String>
+    <system:String x:Key="Nav_Convert">Конвертация</system:String>
+    <system:String x:Key="Nav_Settings">Настройки</system:String>
+    <system:String x:Key="Nav_Help">Справка</system:String>
+
+    <system:String x:Key="Settings_Title">Настройки</system:String>
+    <system:String x:Key="Settings_Personalization">Персонализация</system:String>
+    <system:String x:Key="Settings_ThemeTitle">Тема оформления</system:String>
+    <system:String x:Key="Settings_ThemeDesc">Выберите режим отображения приложения</system:String>
+    <system:String x:Key="Theme_Light">Светлая</system:String>
+    <system:String x:Key="Theme_Dark">Темная</system:String>
+    <system:String x:Key="Theme_System">Системная</system:String>
+    
+    <system:String x:Key="Settings_TransparencyTitle">Эффекты прозрачности</system:String>
+    <system:String x:Key="Settings_TransparencyDesc">Использовать материалы Mica и Acrylic</system:String>
+    
+    <system:String x:Key="Settings_General">Основные</system:String>
+    <system:String x:Key="Settings_LanguageTitle">Язык приложения</system:String>
+    <system:String x:Key="Settings_LanguageDesc">Выберите язык интерфейса</system:String>
+    <system:String x:Key="Settings_Conversion">Конвертация</system:String>
+    <system:String x:Key="Settings_AlwaysIncludeSubfolders">Всегда включать вложенные папки</system:String>
+    <system:String x:Key="Settings_AlwaysIncludeSubfoldersDesc">При выборе папки сразу искать изображения во всех подпапках</system:String>
+    <system:String x:Key="Settings_PreserveFolderStructure">Сохранять структуру подпапок</system:String>
+    <system:String x:Key="Settings_PreserveFolderStructureDesc">Результаты раскладываются по тем же подпапкам, что и исходники. Если выключено, все файлы сохраняются в одну папку.</system:String>
+    
+    <system:String x:Key="Settings_About">О программе</system:String>
+    <system:String x:Key="Settings_VersionPrefix" xml:space="preserve">Версия </system:String>
+    <system:String x:Key="Settings_Version">Версия 1.0.0</system:String>
+    <system:String x:Key="About_ProjectSite">Сайт проекта</system:String>
+    <system:String x:Key="About_GitHub">Репозиторий на GitHub</system:String>
+    <system:String x:Key="About_License">Лицензия: GNU AGPL-3.0</system:String>
+    <system:String x:Key="About_ThirdParty">Сторонние компоненты и их лицензии</system:String>
+
+    <system:String x:Key="Mass_DropZoneTitle">Перетащите папку сюда</system:String>
+    <system:String x:Key="Mass_DropZoneSub">или выберите папку для загрузки</system:String>
+    <system:String x:Key="Unified_DropZoneTitle">Перетащите файл или папку сюда</system:String>
+    <system:String x:Key="Unified_FormatsSupported">JPG, PNG, WEBP, GIF, HEIC, HEIF, PDF и другие</system:String>
+    <system:String x:Key="Unified_SourcePath">Путь к файлу или папке</system:String>
+    <system:String x:Key="Drop_ReadyTitle">Отпустите, чтобы добавить</system:String>
+    <system:String x:Key="Drop_ReadySub">Путь готов к конвертации</system:String>
+    <system:String x:Key="Drop_PartialTitle">Будут добавлены поддерживаемые файлы</system:String>
+    <system:String x:Key="Drop_PartialSub">Неподдерживаемые файлы будут пропущены</system:String>
+    <system:String x:Key="Drop_InvalidTitle">Нет поддерживаемых файлов</system:String>
+    <system:String x:Key="Drop_InvalidSub">Выберите изображение или папку с поддерживаемыми изображениями</system:String>
+    <system:String x:Key="Mass_SourceDir">Папка с исходными файлами</system:String>
+    <system:String x:Key="Mass_TargetDir">Папка назначения</system:String>
+    <system:String x:Key="Mass_Browse">Обзор...</system:String>
+    <system:String x:Key="Mass_IncludeSubfolders">Включая вложенные папки</system:String>
+    <system:String x:Key="Mass_Format">Формат конвертации</system:String>
+    <system:String x:Key="Mass_Quality">Качество сжатия</system:String>
+    
+    <system:String x:Key="Quality_Medium">Среднее 75%</system:String>
+    <system:String x:Key="Quality_High">Высокое 90%</system:String>
+    <system:String x:Key="Quality_Max">Макс. 100%</system:String>
+    <system:String x:Key="Quality_Custom">Свое</system:String>
+    <system:String x:Key="Format_Other">Другие...</system:String>
+    
+    <system:String x:Key="Action_Cancel">Отменить</system:String>
+    <system:String x:Key="Action_Convert">Конвертировать</system:String>
+    <system:String x:Key="Action_Enable">Включить</system:String>
+    <system:String x:Key="Action_SelectFile">Файл...</system:String>
+    <system:String x:Key="Action_SelectFolder">Папка...</system:String>
+
+    <system:String x:Key="Single_Title">Конвертация одного файла</system:String>
+    <system:String x:Key="Single_Desc">Выберите или перетащите одно изображение для быстрой обработки.</system:String>
+    <system:String x:Key="Single_FormatsSupported">JPG, PNG, WEBP, AVIF, TIFF, GIF, ICO, PDF и RAW</system:String>
+    <system:String x:Key="Mass_Desc">Конвертация всех изображений в выбранных папках с применением общих настроек.</system:String>
+    <system:String x:Key="Quality_Low">Низкое 50%</system:String>
+    
+    <system:String x:Key="Mass_FolderNotSelected">Папка не выбрана</system:String>
+    <system:String x:Key="Mass_Preparing">Подготовка...</system:String>
+    <system:String x:Key="Mass_FilesFound">Найдено файлов: {0}</system:String>
+    <system:String x:Key="Mass_FilesFoundWithSkipped">Найдено файлов: {0}. Пропущено неподдерживаемых: {1}.</system:String>
+    <system:String x:Key="Mass_SourceNotFound">Путь не найден</system:String>
+    <system:String x:Key="Mass_NoSupportedFiles">Поддерживаемые файлы не найдены</system:String>
+    <system:String x:Key="Mass_Converting">Конвертация: {0} из {1}</system:String>
+    <system:String x:Key="Mass_Completed">Успешно завершено!</system:String>
+
+    <system:String x:Key="Single_DropZoneTitle">Перетащите файл сюда</system:String>
+    <system:String x:Key="Single_DropZoneSub">или нажмите для выбора</system:String>
+    <system:String x:Key="Single_FileInfo">Информация о файле</system:String>
+    <system:String x:Key="Convert_DeleteOriginal">Удалить оригиналы</system:String>
+    <system:String x:Key="Convert_DeleteOriginal_Tooltip">Переместить исходные файлы в корзину после успешной конвертации</system:String>
+    <system:String x:Key="Convert_ExtractAllPages">Извлечь все кадры/страницы/размеры</system:String>
+    <system:String x:Key="Convert_ExtractAllPages_Tooltip">GIF/WEBP/AVIF: кадры; PDF/TIFF: страницы; ICO: размеры иконок. Если выключено, конвертируется только первое изображение.</system:String>
+    <system:String x:Key="Hint_ExtractAllAvailable">Файл может содержать несколько кадров, страниц или размеров. Извлечь все для этой конвертации?</system:String>
+    <system:String x:Key="Hint_SubfoldersAvailable">В выбранной папке есть вложенные папки. Включить их для этой конвертации?</system:String>
+    <system:String x:Key="Convert_Notice_MultipleSingle">Файл может содержать несколько кадров, страниц или размеров. Сейчас будет конвертировано только первое изображение.</system:String>
+    <system:String x:Key="Convert_Notice_MultipleMass">Среди найденных файлов есть форматы с несколькими кадрами, страницами или размерами. Сейчас будет конвертировано только первое изображение каждого такого файла.</system:String>
+    <system:String x:Key="Convert_Notice_AlphaSingle">При конвертации в {0} прозрачность может быть потеряна: альфа-канал будет заменен белым фоном.</system:String>
+    <system:String x:Key="Convert_Notice_AlphaMass">Если исходные файлы содержат прозрачность, при конвертации в {0} альфа-канал будет заменен белым фоном.</system:String>
+    <system:String x:Key="Convert_Notice_UnsupportedInput">Этот тип файла не поддерживается. Выберите изображение: {0}.</system:String>
+    <system:String x:Key="Convert_Notice_VideoUnsupported">Видео не поддерживается: приложение работает с изображениями. Сначала извлеките кадры через видеоредактор или FFmpeg, затем конвертируйте полученные изображения.</system:String>
+    <system:String x:Key="Single_SourceFile">Путь к картинке</system:String>
+    <system:String x:Key="Single_TargetFile">Путь сохранения конвертированной картинки</system:String>
+
+    <!-- Dialogs and notifications -->
+    <system:String x:Key="Dialog_SelectImageTitle">Выберите изображение для конвертации</system:String>
+    <system:String x:Key="Dialog_SelectFolderTitle">Выберите папку назначения</system:String>
+    <system:String x:Key="Dialog_SelectSourceFolderTitle">Выберите папку с исходными изображениями</system:String>
+    <system:String x:Key="Dialog_ImageFilter">Изображения|*.jpg;*.jpeg;*.png;*.webp;*.bmp;*.tga;*.avif;*.heic;*.heif;*.cr2;*.cr3;*.nef;*.arw;*.dng;*.psd;*.svg;*.gif;*.ico;*.tiff;*.tif;*.jxl;*.pdf;*.dds;*.exr;*.ppm;*.pgm;*.pbm|Все файлы|*.*</system:String>
+    <system:String x:Key="Msg_SuccessTitle">Успех</system:String>
+    <system:String x:Key="Msg_SuccessSingle">Конвертация успешно завершена</system:String>
+    <system:String x:Key="Msg_SuccessMass">Конвертировано файлов: {0}</system:String>
+    <system:String x:Key="Msg_ConversionSummary">Готово: {0} успешно, {1} с ошибкой, {2} пропущено</system:String>
+    <system:String x:Key="Msg_PartialTitle">Завершено с ошибками</system:String>
+    <system:String x:Key="Msg_PartialMass">Конвертировано файлов: {0}. Ошибок: {1}.</system:String>
+    <system:String x:Key="Msg_CancelledTitle">Отменено</system:String>
+    <system:String x:Key="Msg_CancelledSingle">Конвертация была отменена</system:String>
+    <system:String x:Key="Msg_CancelledMass">Массовая конвертация была отменена</system:String>
+    <system:String x:Key="Msg_ErrorTitle">Ошибка</system:String>
+    <system:String x:Key="Msg_ErrorSingle">Не удалось конвертировать: {0}</system:String>
+    <system:String x:Key="Msg_ErrorScan">Ошибка сканирования: {0}</system:String>
+    <system:String x:Key="Msg_ScanProgress">Сканирование папки...</system:String>
+    <system:String x:Key="Msg_OpenFolder">Открыть папку</system:String>
+    <system:String x:Key="Msg_SubfoldersHintTitle">Требуются вложенные папки</system:String>
+    <system:String x:Key="Msg_SubfoldersHint">В этой папке есть подпапки. Включите их для текущей конвертации.</system:String>
+
+
+    <!-- Tooltips and prompts -->
+    <system:String x:Key="Action_Clear">Очистить</system:String>
+    <system:String x:Key="Tooltip_DropZone">Перетащите файл или папку либо нажмите, чтобы выбрать файл</system:String>
+    <system:String x:Key="Tooltip_CustomQuality">Значение от 1 до 100</system:String>
+    <system:String x:Key="Msg_FailedFiles">Не удалось: {0}</system:String>
+    <system:String x:Key="Msg_AndMore" xml:space="preserve"> и еще {0}</system:String>
+    <system:String x:Key="Close_ConvertingTitle">Идет конвертация</system:String>
+    <system:String x:Key="Close_ConvertingMessage">Прервать конвертацию и закрыть программу? Уже готовые файлы сохранятся, файлы в обработке будут дописаны до конца.</system:String>
+    <system:String x:Key="Close_Stop">Прервать и закрыть</system:String>
+    <system:String x:Key="Close_Continue">Продолжить</system:String>
+
+    <!-- Help -->
+    <system:String x:Key="Help_Title">Справка</system:String>
+    <system:String x:Key="Help_Subtitle">Как пользоваться программой, какие форматы поддерживаются и как работают основные функции.</system:String>
+    <system:String x:Key="Help_QuickStart_Title">Быстрый старт</system:String>
+    <system:String x:Key="Help_QuickStart_Body" xml:space="preserve">1. Перетащите файл или папку в верхнюю область либо выберите их кнопками «Файл...» и «Папка...».&#10;2. Проверьте папку назначения. Для папки по умолчанию создается подпапка converted, для отдельного файла используется папка, в которой он лежит.&#10;3. Выберите формат и, если он поддерживает сжатие, качество.&#10;4. Нажмите «Конвертировать». Ход работы показан под выбором формата. После завершения появится уведомление с кнопкой «Открыть папку».</system:String>
+    <system:String x:Key="Help_Formats_Title">Поддерживаемые форматы</system:String>
+    <system:String x:Key="Help_Formats_Body" xml:space="preserve">Чтение: JPG, PNG, WEBP, AVIF, BMP, TIFF, TGA, GIF, ICO, JXL, PDF, HEIC, HEIF, PSD, SVG, DDS, EXR, PPM, PGM, PBM, RAW (CR2, CR3, NEF, ARW, DNG).&#10;&#10;Запись: JPG, PNG, WEBP, GIF, AVIF, JXL, PDF. В меню «Другие...»: JPEG, TIFF, BMP, ICO, TGA, SVG, PSD, DDS, EXR, PPM, PGM, PBM.&#10;&#10;HEIC и HEIF доступны только для чтения. RAW-снимки обрабатываются с параметрами по умолчанию, без ручной коррекции. Видеофайлы не поддерживаются.&#10;&#10;При сохранении в SVG изображение встраивается в файл как растр, векторизация не выполняется.</system:String>
+    <system:String x:Key="Help_Quality_Title">Качество сжатия</system:String>
+    <system:String x:Key="Help_Quality_Body" xml:space="preserve">Выбор качества доступен для JPG, WEBP, AVIF и JXL. Чем выше значение, тем лучше качество и больше размер файла. Для фотографий обычно достаточно 75-90%.&#10;&#10;Для JXL значение 100% означает сжатие без потерь. Для AVIF значение 100% записывается как 99%, так как встроенный кодировщик не поддерживает режим без потерь.&#10;&#10;Остальные форматы сохраняются без потерь, поэтому выбор качества для них скрыт.</system:String>
+    <system:String x:Key="Help_Alpha_Title">Прозрачность и цвет</system:String>
+    <system:String x:Key="Help_Alpha_Body" xml:space="preserve">PNG, WEBP, AVIF, JXL, GIF, TIFF, TGA, ICO, PSD, DDS, EXR и PDF сохраняют прозрачность. JPG, BMP, PPM, PGM и PBM ее не поддерживают: прозрачные области заменяются белым фоном. Программа предупреждает об этом до начала конвертации.&#10;&#10;Изображения в CMYK при сохранении в форматы для экрана (PNG, WEBP, GIF, AVIF, BMP, ICO и другие) переводятся в sRGB, чтобы цвета отображались правильно. JPG, TIFF, PSD и PDF сохраняют CMYK.&#10;&#10;Ориентация по данным EXIF применяется автоматически.</system:String>
+    <system:String x:Key="Help_MultiImage_Title">Анимация, страницы и наборы изображений</system:String>
+    <system:String x:Key="Help_MultiImage_Body" xml:space="preserve">GIF, WEBP и AVIF могут содержать кадры анимации, PDF и TIFF содержат страницы, ICO и HEIC могут хранить несколько изображений.&#10;&#10;По умолчанию конвертируется только первое изображение, для ICO берется самое крупное. Если включить «Извлечь все кадры/страницы/размеры» в настройках или в подсказке на главном экране, каждое изображение сохраняется отдельным файлом с суффиксом _page1, _page2 и так далее.&#10;&#10;Анимация при конвертации не сохраняется: результатом будет статичное изображение или набор кадров.</system:String>
+    <system:String x:Key="Help_Ico_Title">Создание иконок (ICO)</system:String>
+    <system:String x:Key="Help_Ico_Body" xml:space="preserve">При конвертации в ICO создается набор размеров 256, 128, 64, 48, 32 и 16 пикселей. Размеры больше исходного изображения не добавляются, чтобы иконка не была размытой.&#10;&#10;Неквадратные изображения вписываются в квадрат с прозрачными полями.</system:String>
+    <system:String x:Key="Help_Pdf_Title">PDF</system:String>
+    <system:String x:Key="Help_Pdf_Body" xml:space="preserve">Страницы PDF переводятся в изображения с разрешением 300 DPI. Для чтения PDF используется встроенный Ghostscript, устанавливать его отдельно не нужно.&#10;&#10;При конвертации в PDF каждый исходный файл сохраняется отдельным документом.</system:String>
+    <system:String x:Key="Help_Output_Title">Папка назначения и имена файлов</system:String>
+    <system:String x:Key="Help_Output_Body" xml:space="preserve">Если папка назначения не выбрана вручную, результаты сохраняются в подпапку converted внутри исходной папки. Если выбран рабочий стол, «Документы», «Изображения», «Загрузки» или корень диска, а файлов больше пяти, внутри создается отдельная папка converted.&#10;&#10;Существующие файлы не перезаписываются: при совпадении имени добавляется суффикс _1, _2 и так далее. Файлы из папки назначения не попадают в повторную конвертацию.</system:String>
+    <system:String x:Key="Help_Subfolders_Title">Вложенные папки</system:String>
+    <system:String x:Key="Help_Subfolders_Body" xml:space="preserve">Параметр «Всегда включать вложенные папки» включает поиск изображений во всех подпапках. Если он выключен, а подпапки найдены, программа предложит включить их для текущей конвертации.&#10;&#10;По умолчанию все результаты сохраняются в одну папку. Параметр «Сохранять структуру подпапок» раскладывает их по тем же подпапкам, что и исходные файлы.</system:String>
+    <system:String x:Key="Help_Delete_Title">Удаление оригиналов</system:String>
+    <system:String x:Key="Help_Delete_Body" xml:space="preserve">Исходный файл удаляется только после того, как все результаты успешно записаны на диск. Если конвертация файла завершилась ошибкой, оригинал остается на месте.&#10;&#10;Оригиналы перемещаются в корзину Windows, поэтому их можно восстановить. На сетевых и съемных дисках без корзины файлы удаляются окончательно.</system:String>
+    <system:String x:Key="Help_Settings_Title">Настройки</system:String>
+    <system:String x:Key="Help_Settings_Body" xml:space="preserve">Тема «Системная» следует теме Windows и меняется вместе с ней. Акцентный цвет берется из настроек Windows. Эффекты прозрачности Mica доступны в Windows 11.&#10;&#10;Все параметры, а также размер и положение окна сохраняются между запусками.</system:String>
+</ResourceDictionary>

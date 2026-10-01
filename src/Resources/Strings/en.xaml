@@ -1,0 +1,160 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="Nav_MassConvert">Mass Conversion</system:String>
+    <system:String x:Key="Nav_SingleConvert">Single File</system:String>
+    <system:String x:Key="Nav_Convert">Conversion</system:String>
+    <system:String x:Key="Nav_Settings">Settings</system:String>
+    <system:String x:Key="Nav_Help">Help</system:String>
+
+    <system:String x:Key="Settings_Title">Settings</system:String>
+    <system:String x:Key="Settings_Personalization">Personalization</system:String>
+    <system:String x:Key="Settings_ThemeTitle">Theme</system:String>
+    <system:String x:Key="Settings_ThemeDesc">Select application display mode</system:String>
+    <system:String x:Key="Theme_Light">Light</system:String>
+    <system:String x:Key="Theme_Dark">Dark</system:String>
+    <system:String x:Key="Theme_System">System</system:String>
+    
+    <system:String x:Key="Settings_TransparencyTitle">Transparency effects</system:String>
+    <system:String x:Key="Settings_TransparencyDesc">Use Mica and Acrylic materials</system:String>
+    
+    <system:String x:Key="Settings_General">General</system:String>
+    <system:String x:Key="Settings_LanguageTitle">Application language</system:String>
+    <system:String x:Key="Settings_LanguageDesc">Select interface language</system:String>
+    <system:String x:Key="Settings_Conversion">Conversion</system:String>
+    <system:String x:Key="Settings_AlwaysIncludeSubfolders">Always include subfolders</system:String>
+    <system:String x:Key="Settings_AlwaysIncludeSubfoldersDesc">When a folder is selected, scan images in all nested folders</system:String>
+    <system:String x:Key="Settings_PreserveFolderStructure">Keep subfolder structure</system:String>
+    <system:String x:Key="Settings_PreserveFolderStructureDesc">Converted files are placed in the same subfolders as the source files. When off, all files are saved to one folder.</system:String>
+    
+    <system:String x:Key="Settings_About">About</system:String>
+    <system:String x:Key="Settings_VersionPrefix" xml:space="preserve">Version </system:String>
+    <system:String x:Key="Settings_Version">Version 1.0.0</system:String>
+    <system:String x:Key="About_ProjectSite">Project website</system:String>
+    <system:String x:Key="About_GitHub">GitHub repository</system:String>
+    <system:String x:Key="About_License">License: GNU AGPL-3.0</system:String>
+    <system:String x:Key="About_ThirdParty">Third-party components and licenses</system:String>
+
+    <system:String x:Key="Mass_DropZoneTitle">Drag and drop folder here</system:String>
+    <system:String x:Key="Mass_DropZoneSub">or select a folder to load</system:String>
+    <system:String x:Key="Unified_DropZoneTitle">Drag and drop a file or folder here</system:String>
+    <system:String x:Key="Unified_FormatsSupported">JPG, PNG, WEBP, GIF, HEIC, HEIF, PDF, and more</system:String>
+    <system:String x:Key="Unified_SourcePath">File or folder path</system:String>
+    <system:String x:Key="Drop_ReadyTitle">Release to add</system:String>
+    <system:String x:Key="Drop_ReadySub">The path is ready for conversion</system:String>
+    <system:String x:Key="Drop_PartialTitle">Supported files will be added</system:String>
+    <system:String x:Key="Drop_PartialSub">Unsupported files will be skipped</system:String>
+    <system:String x:Key="Drop_InvalidTitle">No supported files</system:String>
+    <system:String x:Key="Drop_InvalidSub">Choose an image or a folder with supported images</system:String>
+    <system:String x:Key="Mass_SourceDir">Source folder</system:String>
+    <system:String x:Key="Mass_TargetDir">Target folder</system:String>
+    <system:String x:Key="Mass_Browse">Browse...</system:String>
+    <system:String x:Key="Mass_IncludeSubfolders">Include subfolders</system:String>
+    <system:String x:Key="Mass_Format">Conversion format</system:String>
+    <system:String x:Key="Mass_Quality">Compression quality</system:String>
+    
+    <system:String x:Key="Quality_Medium">Medium 75%</system:String>
+    <system:String x:Key="Quality_High">High 90%</system:String>
+    <system:String x:Key="Quality_Max">Max 100%</system:String>
+    <system:String x:Key="Quality_Custom">Custom</system:String>
+    <system:String x:Key="Format_Other">Other...</system:String>
+    
+    <system:String x:Key="Action_Cancel">Cancel</system:String>
+    <system:String x:Key="Action_Convert">Convert</system:String>
+    <system:String x:Key="Action_Enable">Enable</system:String>
+    <system:String x:Key="Action_SelectFile">File...</system:String>
+    <system:String x:Key="Action_SelectFolder">Folder...</system:String>
+
+    <system:String x:Key="Single_Title">Single File Conversion</system:String>
+    <system:String x:Key="Single_Desc">Select or drag and drop a single image for quick processing.</system:String>
+    <system:String x:Key="Single_FormatsSupported">JPG, PNG, WEBP, AVIF, TIFF, GIF, ICO, PDF, and RAW</system:String>
+    <system:String x:Key="Mass_Desc">Convert all images in selected folders using common settings.</system:String>
+    <system:String x:Key="Quality_Low">Low 50%</system:String>
+    
+    <system:String x:Key="Mass_FolderNotSelected">Folder not selected</system:String>
+    <system:String x:Key="Mass_Preparing">Preparing...</system:String>
+    <system:String x:Key="Mass_FilesFound">Files found: {0}</system:String>
+    <system:String x:Key="Mass_FilesFoundWithSkipped">Files found: {0}. Unsupported skipped: {1}.</system:String>
+    <system:String x:Key="Mass_SourceNotFound">Source path was not found</system:String>
+    <system:String x:Key="Mass_NoSupportedFiles">No supported files found</system:String>
+    <system:String x:Key="Mass_Converting">Converting: {0} of {1}</system:String>
+    <system:String x:Key="Mass_Completed">Completed successfully!</system:String>
+
+    <system:String x:Key="Single_DropZoneTitle">Drag and drop file here</system:String>
+    <system:String x:Key="Single_DropZoneSub">or click to select</system:String>
+    <system:String x:Key="Single_FileInfo">File Information</system:String>
+    <system:String x:Key="Single_SourceFile">Image path</system:String>
+    <system:String x:Key="Single_TargetFile">Converted image save path</system:String>
+
+    <!-- Dialogs and notifications -->
+    <system:String x:Key="Dialog_SelectImageTitle">Select image for conversion</system:String>
+    <system:String x:Key="Dialog_SelectFolderTitle">Select target folder</system:String>
+    <system:String x:Key="Dialog_SelectSourceFolderTitle">Select source folder</system:String>
+    <system:String x:Key="Dialog_ImageFilter">Images|*.jpg;*.jpeg;*.png;*.webp;*.bmp;*.tga;*.avif;*.heic;*.heif;*.cr2;*.cr3;*.nef;*.arw;*.dng;*.psd;*.svg;*.gif;*.ico;*.tiff;*.tif;*.jxl;*.pdf;*.dds;*.exr;*.ppm;*.pgm;*.pbm|All Files|*.*</system:String>
+    <system:String x:Key="Convert_DeleteOriginal">Delete originals</system:String>
+    <system:String x:Key="Convert_DeleteOriginal_Tooltip">Move source files to the Recycle Bin after successful conversion</system:String>
+    <system:String x:Key="Convert_ExtractAllPages">Extract all frames/pages/sizes</system:String>
+    <system:String x:Key="Convert_ExtractAllPages_Tooltip">GIF/WEBP/AVIF: frames; PDF/TIFF: pages; ICO: icon sizes. If disabled, only the first image is converted.</system:String>
+    <system:String x:Key="Hint_ExtractAllAvailable">This file may contain several frames, pages, or sizes. Extract all for this conversion?</system:String>
+    <system:String x:Key="Hint_SubfoldersAvailable">The selected folder has nested folders. Include them for this conversion?</system:String>
+    <system:String x:Key="Convert_Notice_MultipleSingle">This file may contain several frames, pages, or icon sizes. Only the first image will be converted.</system:String>
+    <system:String x:Key="Convert_Notice_MultipleMass">Some found files may contain several frames, pages, or icon sizes. Only the first image of each such file will be converted.</system:String>
+    <system:String x:Key="Convert_Notice_AlphaSingle">When converting to {0}, transparency can be lost: the alpha channel will be replaced with a white background.</system:String>
+    <system:String x:Key="Convert_Notice_AlphaMass">If source files contain transparency, converting to {0} will replace the alpha channel with a white background.</system:String>
+    <system:String x:Key="Convert_Notice_UnsupportedInput">This file type is not supported. Select an image: {0}.</system:String>
+    <system:String x:Key="Convert_Notice_VideoUnsupported">Video is not supported: the app works with images. Extract frames with a video editor or FFmpeg first, then convert the resulting images.</system:String>
+    <system:String x:Key="Msg_SuccessTitle">Success</system:String>
+    <system:String x:Key="Msg_SuccessSingle">Conversion completed successfully</system:String>
+    <system:String x:Key="Msg_SuccessMass">Converted files: {0}</system:String>
+    <system:String x:Key="Msg_ConversionSummary">Done: {0} successful, {1} failed, {2} skipped</system:String>
+    <system:String x:Key="Msg_PartialTitle">Completed with errors</system:String>
+    <system:String x:Key="Msg_PartialMass">Converted files: {0}. Failed files: {1}.</system:String>
+    <system:String x:Key="Msg_CancelledTitle">Cancelled</system:String>
+    <system:String x:Key="Msg_CancelledSingle">Single conversion was cancelled</system:String>
+    <system:String x:Key="Msg_CancelledMass">Mass conversion was cancelled</system:String>
+    <system:String x:Key="Msg_ErrorTitle">Error</system:String>
+    <system:String x:Key="Msg_ErrorSingle">Could not convert: {0}</system:String>
+    <system:String x:Key="Msg_ErrorScan">Scan error: {0}</system:String>
+    <system:String x:Key="Msg_ScanProgress">Scanning folder...</system:String>
+    <system:String x:Key="Msg_OpenFolder">Open folder</system:String>
+    <system:String x:Key="Msg_SubfoldersHintTitle">Subfolders Required</system:String>
+    <system:String x:Key="Msg_SubfoldersHint">This folder has nested folders. Enable them for the current conversion.</system:String>
+
+
+    <!-- Tooltips and prompts -->
+    <system:String x:Key="Action_Clear">Clear</system:String>
+    <system:String x:Key="Tooltip_DropZone">Drop a file or folder here, or click to select a file</system:String>
+    <system:String x:Key="Tooltip_CustomQuality">Value from 1 to 100</system:String>
+    <system:String x:Key="Msg_FailedFiles">Failed: {0}</system:String>
+    <system:String x:Key="Msg_AndMore" xml:space="preserve"> and {0} more</system:String>
+    <system:String x:Key="Close_ConvertingTitle">Conversion in progress</system:String>
+    <system:String x:Key="Close_ConvertingMessage">Stop the conversion and close the app? Finished files are kept, files in progress are completed first.</system:String>
+    <system:String x:Key="Close_Stop">Stop and close</system:String>
+    <system:String x:Key="Close_Continue">Continue</system:String>
+
+    <!-- Help -->
+    <system:String x:Key="Help_Title">Help</system:String>
+    <system:String x:Key="Help_Subtitle">How to use the app, which formats are supported, and how the main features work.</system:String>
+    <system:String x:Key="Help_QuickStart_Title">Quick start</system:String>
+    <system:String x:Key="Help_QuickStart_Body" xml:space="preserve">1. Drag a file or folder onto the top area, or select it with the File... and Folder... buttons.&#10;2. Check the destination folder. For a folder, a converted subfolder is created by default. For a single file, the folder that contains it is used.&#10;3. Select the output format and, if the format supports compression, the quality.&#10;4. Click Convert. Progress is shown below the format selection. When the job is finished, a notification with an Open folder button appears.</system:String>
+    <system:String x:Key="Help_Formats_Title">Supported formats</system:String>
+    <system:String x:Key="Help_Formats_Body" xml:space="preserve">Read: JPG, PNG, WEBP, AVIF, BMP, TIFF, TGA, GIF, ICO, JXL, PDF, HEIC, HEIF, PSD, SVG, DDS, EXR, PPM, PGM, PBM, RAW (CR2, CR3, NEF, ARW, DNG).&#10;&#10;Write: JPG, PNG, WEBP, GIF, AVIF, JXL, PDF. In the Other... menu: JPEG, TIFF, BMP, ICO, TGA, SVG, PSD, DDS, EXR, PPM, PGM, PBM.&#10;&#10;HEIC and HEIF are read-only. RAW photos are processed with default settings, without manual adjustments. Video files are not supported.&#10;&#10;When saving to SVG, the image is embedded as a raster, no vectorization is performed.</system:String>
+    <system:String x:Key="Help_Quality_Title">Compression quality</system:String>
+    <system:String x:Key="Help_Quality_Body" xml:space="preserve">Quality can be set for JPG, WEBP, AVIF, and JXL. A higher value gives better quality and a larger file. For photos, 75-90% is usually enough.&#10;&#10;For JXL, 100% means lossless compression. For AVIF, 100% is written as 99% because the bundled encoder does not support lossless mode.&#10;&#10;All other formats are saved without loss, so the quality selector is hidden for them.</system:String>
+    <system:String x:Key="Help_Alpha_Title">Transparency and color</system:String>
+    <system:String x:Key="Help_Alpha_Body" xml:space="preserve">PNG, WEBP, AVIF, JXL, GIF, TIFF, TGA, ICO, PSD, DDS, EXR, and PDF keep transparency. JPG, BMP, PPM, PGM, and PBM do not support it: transparent areas are replaced with a white background. The app warns about this before conversion.&#10;&#10;CMYK images saved to screen formats (PNG, WEBP, GIF, AVIF, BMP, ICO, and others) are converted to sRGB so that colors display correctly. JPG, TIFF, PSD, and PDF keep CMYK.&#10;&#10;EXIF orientation is applied automatically.</system:String>
+    <system:String x:Key="Help_MultiImage_Title">Animation, pages, and image sets</system:String>
+    <system:String x:Key="Help_MultiImage_Body" xml:space="preserve">GIF, WEBP, and AVIF can contain animation frames, PDF and TIFF contain pages, and ICO and HEIC can store several images.&#10;&#10;By default, only the first image is converted. For ICO, the largest image is used. When Extract all frames/pages/sizes is enabled in Settings or in the hint on the main screen, every image is saved as a separate file with the _page1, _page2, and so on suffix.&#10;&#10;Animation is not preserved: the result is a still image or a set of frames.</system:String>
+    <system:String x:Key="Help_Ico_Title">Creating icons (ICO)</system:String>
+    <system:String x:Key="Help_Ico_Body" xml:space="preserve">Converting to ICO creates a set of 256, 128, 64, 48, 32, and 16 pixel sizes. Sizes larger than the source image are skipped so that the icon does not look blurry.&#10;&#10;Non-square images are fitted into a square with transparent margins.</system:String>
+    <system:String x:Key="Help_Pdf_Title">PDF</system:String>
+    <system:String x:Key="Help_Pdf_Body" xml:space="preserve">PDF pages are rendered to images at 300 DPI. PDF files are read with the bundled Ghostscript, no separate installation is required.&#10;&#10;When converting to PDF, each source file is saved as a separate document.</system:String>
+    <system:String x:Key="Help_Output_Title">Destination folder and file names</system:String>
+    <system:String x:Key="Help_Output_Body" xml:space="preserve">If no destination folder is selected, results are saved to a converted subfolder inside the source folder. If the Desktop, Documents, Pictures, Downloads, or a drive root is selected and there are more than five files, a separate converted folder is created inside it.&#10;&#10;Existing files are never overwritten: when a name is taken, the _1, _2, and so on suffix is added. Files in the destination folder are excluded from repeated conversion.</system:String>
+    <system:String x:Key="Help_Subfolders_Title">Subfolders</system:String>
+    <system:String x:Key="Help_Subfolders_Body" xml:space="preserve">Always include subfolders makes the app search for images in all nested folders. When it is off and subfolders are found, the app offers to include them for the current conversion.&#10;&#10;By default, all results are saved to one folder. Keep subfolder structure places them in the same subfolders as the source files.</system:String>
+    <system:String x:Key="Help_Delete_Title">Deleting originals</system:String>
+    <system:String x:Key="Help_Delete_Body" xml:space="preserve">A source file is deleted only after all of its results have been written to disk. If a file fails to convert, the original is kept.&#10;&#10;Originals are moved to the Windows Recycle Bin, so they can be restored. On network and removable drives without a Recycle Bin, files are deleted permanently.</system:String>
+    <system:String x:Key="Help_Settings_Title">Settings</system:String>
+    <system:String x:Key="Help_Settings_Body" xml:space="preserve">The System theme follows the Windows theme and changes with it. The accent color is taken from Windows settings. Mica transparency effects are available on Windows 11.&#10;&#10;All settings, as well as the window size and position, are saved between sessions.</system:String>
+</ResourceDictionary>

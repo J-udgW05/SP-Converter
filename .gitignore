@@ -1,0 +1,27 @@
+# Build & Output Directories
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+[Dd]ist/
+publish*/
+setup/
+artifacts/
+installer/
+tools/dotnet-tools/
+
+# Visual Studio & IDEs
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Temp Files
+*.tmp
+*.log
+
+# Personal Notes
+правки.txt
+
+Dist_Clean/

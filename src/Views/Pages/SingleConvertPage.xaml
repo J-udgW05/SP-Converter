@@ -1,0 +1,191 @@
+<Page x:Class="SPConverter.Views.Pages.SingleConvertPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      Title="Один файл"
+      Background="Transparent"
+      FontFamily="Segoe UI Variable, Segoe UI, sans-serif">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  PreviewMouseWheel="OnPageScrollViewerPreviewMouseWheel">
+        <Grid Margin="24,16,24,16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        </Grid.Resources>
+
+
+        <Grid Grid.Row="2" Margin="0,0,0,16">
+            <Border Background="{DynamicResource AppCardBrush}" CornerRadius="8">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="20" ShadowDepth="4" Opacity="0.03" Color="Black" />
+                </Border.Effect>
+            </Border>
+            
+            <Border Background="{DynamicResource AppCardBrush}" 
+                    BorderBrush="{DynamicResource AppCardBorderBrush}" 
+                    BorderThickness="1" CornerRadius="8" Padding="20,18"
+                    VerticalAlignment="Top">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+ 
+                    <Button Grid.Row="0" Style="{StaticResource DragDropButtonStyle}" Command="{Binding SelectFileCommand}" AllowDrop="True" PreviewDragOver="OnDragOver" Drop="OnDrop" Height="150" Margin="0,0,0,16">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ui:SymbolIcon Symbol="Document24" FontSize="36" Margin="0,0,0,8"/>
+                            <TextBlock Text="{DynamicResource Single_DropZoneTitle}" FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,2"/>
+                            <TextBlock Text="{DynamicResource Single_FormatsSupported}" FontSize="11" Opacity="0.7" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <TextBlock Grid.Row="1" Text="{DynamicResource Single_SourceFile}" FontWeight="SemiBold" Margin="0,0,0,6" Foreground="{DynamicResource AppTextBrush}" FontSize="13"/>
+                    <Grid Grid.Row="2" Margin="0,0,0,14">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border Grid.Column="0" Background="{DynamicResource AppInputBrush}" BorderBrush="{DynamicResource AppInputBorderBrush}" BorderThickness="1" CornerRadius="4" Padding="10,6">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ui:SymbolIcon Grid.Column="0" Symbol="Document24" FontSize="16" Foreground="{DynamicResource AppTextBrush}" Opacity="0.5" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" Text="{Binding SelectedFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource BorderlessTextBoxStyle}" />
+                                <Button Grid.Column="2" Content="✕" Style="{StaticResource SecondaryButtonStyle}" BorderThickness="0" Background="Transparent" Padding="4,2" FontSize="10" Command="{Binding ClearSelectedFileCommand}" Margin="4,0,0,0" VerticalAlignment="Center" Visibility="{Binding HasSelectedFile, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                            </Grid>
+                        </Border>
+                        
+                        <Button Grid.Column="2" Content="{DynamicResource Mass_Browse}" Command="{Binding SelectFileCommand}" Style="{StaticResource SecondaryButtonStyle}" />
+                    </Grid>
+
+                    <TextBlock Grid.Row="3" Text="{DynamicResource Single_TargetFile}" FontWeight="SemiBold" Margin="0,0,0,6" Foreground="{DynamicResource AppTextBrush}" FontSize="13"/>
+                    <Grid Grid.Row="4" Margin="0,0,0,16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border Grid.Column="0" Background="{DynamicResource AppInputBrush}" BorderBrush="{DynamicResource AppInputBorderBrush}" BorderThickness="1" CornerRadius="4" Padding="10,6">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ui:SymbolIcon Grid.Column="0" Symbol="FolderOpen24" FontSize="16" Foreground="{DynamicResource AppTextBrush}" Opacity="0.5" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" Text="{Binding TargetDirectory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource BorderlessTextBoxStyle}" />
+                                <Button Grid.Column="2" Content="✕" Style="{StaticResource SecondaryButtonStyle}" BorderThickness="0" Background="Transparent" Padding="4,2" FontSize="10" Command="{Binding ClearTargetCommand}" Margin="4,0,0,0" VerticalAlignment="Center" Visibility="{Binding HasTargetDirectory, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                            </Grid>
+                        </Border>
+                        
+                        <Button Grid.Column="2" Content="{DynamicResource Mass_Browse}" Command="{Binding BrowseTargetCommand}" Style="{StaticResource SecondaryButtonStyle}" />
+                    </Grid>
+
+                    <TextBlock Grid.Row="5" Text="{DynamicResource Mass_Format}" FontWeight="SemiBold" Margin="0,0,0,6" Foreground="{DynamicResource AppTextBrush}" FontSize="13"/>
+                    <WrapPanel Grid.Row="6" Margin="0,0,0,12">
+                        <RadioButton Content="JPG" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=JPG}"/>
+                        <RadioButton Content="JPEG" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=JPEG}"/>
+                        <RadioButton Content="PNG" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=PNG}"/>
+                        <RadioButton Content="WEBP" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=WEBP}"/>
+                        <RadioButton Content="BMP" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=BMP}"/>
+                        <RadioButton Content="TGA" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=TGA}"/>
+                        <RadioButton Content="AVIF" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=AVIF}"/>
+                        <RadioButton Content="TIFF" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=TIFF}"/>
+                        <RadioButton Content="ICO" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=ICO}"/>
+                        <RadioButton Content="JXL" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=JXL}"/>
+                        <RadioButton Content="PDF" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=PDF}"/>
+                        <RadioButton Content="GIF" GroupName="Fmt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding TargetFormat, Converter={StaticResource StringMatchConverter}, ConverterParameter=GIF}"/>
+                    </WrapPanel>
+
+                    <TextBlock Grid.Row="7" Text="{DynamicResource Mass_Quality}" FontWeight="SemiBold" Margin="0,0,0,6" Foreground="{DynamicResource AppTextBrush}" FontSize="13"/>
+                    <WrapPanel Grid.Row="8" Margin="0,0,0,0">
+                        <RadioButton Content="{DynamicResource Quality_Low}" GroupName="Qlt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding Quality, Converter={StaticResource StringMatchConverter}, ConverterParameter=50}"/>
+                        <RadioButton Content="{DynamicResource Quality_Medium}" GroupName="Qlt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding Quality, Converter={StaticResource StringMatchConverter}, ConverterParameter=75}"/>
+                        <RadioButton Content="{DynamicResource Quality_High}" GroupName="Qlt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding Quality, Converter={StaticResource StringMatchConverter}, ConverterParameter=90}"/>
+                        <RadioButton Content="{DynamicResource Quality_Max}" GroupName="Qlt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding Quality, Converter={StaticResource StringMatchConverter}, ConverterParameter=100}"/>
+                        <RadioButton Content="{DynamicResource Quality_Custom}" GroupName="Qlt1" Style="{StaticResource ChipToggleStyle}" IsChecked="{Binding IsCustomQuality}"/>
+                        
+                        <Border Background="{DynamicResource AppInputBrush}" 
+                                BorderBrush="{DynamicResource AppInputBorderBrush}" 
+                                BorderThickness="1" 
+                                CornerRadius="4" 
+                                Width="50" Height="32" 
+                                Margin="8,0,0,8"
+                                VerticalAlignment="Top"
+                                Visibility="{Binding IsCustomQuality, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <Grid>
+                                <TextBox Text="{Binding Quality}" Style="{StaticResource BorderlessTextBoxStyle}" TextAlignment="Center" Padding="4,0" MaxLength="3" />
+                            </Grid>
+                        </Border>
+                    </WrapPanel>
+
+                    <Border Grid.Row="9"
+                            Background="{DynamicResource AppDragDropBackgroundHoverBrush}"
+                            BorderBrush="{DynamicResource AppAccentBrush}"
+                            BorderThickness="1"
+                            CornerRadius="6"
+                            Padding="10,8"
+                            Margin="0,12,0,0"
+                            Visibility="{Binding HasConversionNotice, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ui:SymbolIcon Grid.Column="0"
+                                           Symbol="Warning24"
+                                           FontSize="16"
+                                           Foreground="{DynamicResource AppAccentBrush}"
+                                           Margin="0,1,8,0"
+                                           VerticalAlignment="Top"/>
+                            <TextBlock Grid.Column="1"
+                                       Text="{Binding ConversionNoticeText}"
+                                       FontSize="12"
+                                       Foreground="{DynamicResource AppTextBrush}"
+                                       TextWrapping="Wrap"/>
+                        </Grid>
+                    </Border>
+
+                    <StackPanel Grid.Row="10" Margin="0,12,0,0">
+                        <ui:ToggleSwitch IsChecked="{Binding DeleteOriginal, Mode=TwoWay}"
+                                         Content="{DynamicResource Convert_DeleteOriginal}"
+                                         ToolTip="{DynamicResource Convert_DeleteOriginal_Tooltip}"
+                                         Margin="0,0,0,10"/>
+                        
+                        <ui:ToggleSwitch IsChecked="{Binding ExtractAllPages, Mode=TwoWay}"
+                                         Content="{DynamicResource Convert_ExtractAllPages}"
+                                         ToolTip="{DynamicResource Convert_ExtractAllPages_Tooltip}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="{DynamicResource Action_Cancel}" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,12,0" Command="{Binding CancelCommand}"/>
+            <Button Content="{DynamicResource Action_Convert}" Style="{StaticResource PrimaryButtonStyle}" Command="{Binding ConvertCommand}" />
+        </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

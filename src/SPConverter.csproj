@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\Icon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Product>SP Converter</Product>
+    <Company>J-udgW05</Company>
+    <Copyright>Copyright (C) 2026 J-udgW05</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="14.15.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.10" />
+    <PackageReference Include="WPF-UI" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icon.ico" />
+    <Resource Include="Assets\Logo.png" />
+  </ItemGroup>
+
+  <!-- Ghostscript for PDF input and license files -->
+  <ItemGroup>
+    <None Include="ThirdParty\Ghostscript\gsdll64.dll" Link="ghostscript\gsdll64.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="ThirdParty\Ghostscript\LICENSE.txt" Link="ghostscript\LICENSE.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="ThirdParty\Magick.NET\Notice.txt" Link="licenses\Magick.NET-Notice.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\LICENSE" Link="LICENSE.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\THIRD-PARTY-NOTICES.md" Link="THIRD-PARTY-NOTICES.md" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
